@@ -1,0 +1,19 @@
+
+.hat{
+	position: absolute;
+	top: 195px;
+	right: 114px;
+}
+.glass{
+	position: absolute;
+	top: 347px;
+	right: 192px;
+}
+.octo{
+	margin-left: 180px; 
+	margin-top: 240px;
+
+}
+body{
+	background-color: purple;
+}s
