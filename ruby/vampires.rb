@@ -55,6 +55,8 @@ employees_to_process.to_i.times do
   end
 
   puts vampire_status
-puts
+  puts
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 
