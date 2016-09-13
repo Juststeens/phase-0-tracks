@@ -4,20 +4,15 @@ employees_to_process = gets.chomp
 
 employees_to_process.to_i.times do
   puts "What is your name?"
-  # name = gets.chomp
-  name = "Drake"
+  name = gets.chomp
   puts "How old are you?"
-  # age = gets.chomp
-  age = "27"
+  age = gets.chomp
   puts "What year were you born?"
-  # birth_year = gets.chomp
-  birth_year = "1995"
+  birth_year = gets.chomp
   puts "Do you enjoy Garlic bread? yes/no"
-  # garlic = gets.chomp
-  garlic = "yes"
+  garlic = gets.chomp
   puts "Would you like to enroll in company health insurance? yes/no"
-  # insurance = gets.chomp  
-  insurance = "no"
+  insurance = gets.chomp  
 
   allergy = nil
   allergies = Array.new
