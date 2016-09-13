@@ -8,16 +8,26 @@ employees_to_process.to_i.times do
   name = "Drake"
   puts "How old are you?"
   # age = gets.chomp
-  age = "21"
-  puts "what year were you born"
-  birth_year = gets.chomp
-  # birth_year = "1973"
+  age = "27"
+  puts "What year were you born?"
+  # birth_year = gets.chomp
+  birth_year = "1995"
   puts "Do you enjoy Garlic bread? yes/no"
-  garlic = gets.chomp
-  # garlic = "yes"
+  # garlic = gets.chomp
+  garlic = "yes"
   puts "Would you like to enroll in company health insurance? yes/no"
-  insurance = gets.chomp  
-  # insurance = "yes"
+  # insurance = gets.chomp  
+  insurance = "no"
+
+  allergy = nil
+  allergies = Array.new
+
+  puts "Please list any allergies. Type 'done' when finished."
+
+  until allergy == "done" || allergy == "sunshine" do     
+    allergy = gets.chomp
+    allergies << allergy
+  end
 
 
   vampire_status = "Results inconclusive"
@@ -26,13 +36,13 @@ employees_to_process.to_i.times do
   age_right = current_year - birth_year.to_i == age.to_i
   accept_garlic = garlic == "yes"
   enroll_insurance = insurance == "yes"
+  bad_allergy = allergy == "sunshine"
 
   if age_right && (accept_garlic || enroll_insurance)
     vampire_status = "Probably not a vampire."
   end
 
-  if !age_right && ( !accept_garlic || !enroll_insurance)
-      # true  && (false || true)
+  if bad_allergy || ( !age_right && ( !accept_garlic || !enroll_insurance))
     vampire_status = "Probably a vampire."
   end
 
@@ -43,7 +53,6 @@ employees_to_process.to_i.times do
   if name == "Drake Cula" || name == "Tu Fang"
     vampire_status = "Definitely a vampire."
   end
-
 
   puts vampire_status
 puts
