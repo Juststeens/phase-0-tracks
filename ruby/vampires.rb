@@ -12,18 +12,17 @@ employees_to_process.to_i.times do
   puts "Do you enjoy Garlic bread? yes/no"
   garlic = gets.chomp
   puts "Would you like to enroll in company health insurance? yes/no"
-  insurance = gets.chomp  
+  insurance = gets.chomp
 
   allergy = nil
   allergies = Array.new
 
   puts "Please list any allergies. Type 'done' when finished."
 
-  until allergy == "done" || allergy == "sunshine" do     
+  until allergy == "done" || allergy == "sunshine" do
     allergy = gets.chomp
-    allergies << allergy
+    allergies << allergy if allergy != "done"
   end
-
 
   vampire_status = "Results inconclusive"
   current_year = Time.new.year
