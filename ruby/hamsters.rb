@@ -8,19 +8,16 @@ puts "what is the Hamsters fur color?"
   fur = gets.chomp
 
 puts "good Hamster for adoption?"
-  adoption = gets.chomp
+  adopt = gets.chomp
+    adoptability = true if adopt == "yes"
 
-  if adopt == "yes"
-      adopt = true
-  else 
-    adopt = false
-  end 
 
 puts "Hamsters estimated age?"
   age = gets.chomp
   if age.empty?
-    age = nil
-  else 
-    age = age.to_i
+    estimated_age = nil
+  else
+    estimated_age = age.to_i
+  end
 
-  puts "The Hamsters name is #{name}, it's volume #{volume}, it's fur color is #{fur}, good for adoption? #{adoption}. it's estimated age is #{age}."
+  puts "The Hamsters name is #{name}, it's volume #{volume}, it's fur color is #{fur}, good for adoption? #{adoptability}. it's estimated age is #{estimated_age}."
