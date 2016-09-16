@@ -9,7 +9,7 @@ puts "what is the Hamsters fur color?"
 
 puts "good Hamster for adoption?"
   adopt = gets.chomp
-    adoptability = true if adopt == "yes"
+    adoptability = adopt == "yes"
 
 
 puts "Hamsters estimated age?"
