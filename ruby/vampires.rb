@@ -34,21 +34,13 @@ employees_to_process.to_i.times do
 
   if name == "Drake Cula" || name == "Tu Fang"
     vampire_status = "Definitely a vampire."
-  end
-  if !age_right && !accept_garlic && !enroll_insurance
+  elsif !age_right && !accept_garlic && !enroll_insurance
     vampire_status = "Almost certainly a vampire."
-  end
-
-  if bad_allergy || ( !age_right && ( !accept_garlic || !enroll_insurance))
+  elsif bad_allergy || ( !age_right && ( !accept_garlic || !enroll_insurance))
     vampire_status = "Probably a vampire."
-  end
-
-  if age_right && (accept_garlic || enroll_insurance)
+  else age_right && (accept_garlic || enroll_insurance)
     vampire_status = "Probably not a vampire."
   end
-
-
-
 
   puts vampire_status
   puts
