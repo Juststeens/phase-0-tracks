@@ -1,0 +1,48 @@
+1. A variable is typically a word or phrase that has been given a value to run when it is called. Variables are used to hold data for use in programs.
+
+2. When run in the order given the program will first read and acknowledge the value of first_name then last_name and finally full_name. the final result if the user runs puts, print or p will be "AbrahamLincoln" as a space was not provided within either string.
+
+3.
+string:placed between quotes usually containing a word or sentence.
+
+integer: a fixed rounded number.
+
+float: a fixed number with a decimal.
+
+nil: nothing or false
+
+boolean: a variable with two values: true or false
+
+4. An algorithm is a set of steps repeated until an outcome is reached.
+
+5. a loop and a method
+
+6. a method is a set of steps and conditions defined in a variable
+
+7.
+return value: The outcome of calling  variable or method
+
+side effect: an unexpected/ unwanted outcome of running a program.
+
+Parameter: the expected return of a method
+
+Argument: a value pushed through a method
+
+implicit return: returning the implied result of a metho
+
+8. a global scope is defined outside of a method or loop and can be accessed from anywhere in the program. a method scope is the variable defined within a method. the scope will determine the availability of a variable and where it can be called.
+
+9. control flow is controlling the way a program is read to  optimize it's performance.
+
+10.
+Loop: a continuos repetitive cycle of repeating numbers, letters, or sentences.
+
+if: a statement beginning with if (conditional) then output.
+
+else: ending of if statement means if not any other conditional then output
+
+elsif: follows if statement if this conditional then this output.
+
+while: beginning of a loop while this conditional then this will happen.
+
+until: until this conditional this output will continue.
