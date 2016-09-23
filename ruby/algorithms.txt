@@ -1,42 +1,41 @@
-When using elevator 
+When using elevator
 -Approach elevator door
 
--If elevator doors are open 
+-If elevator doors are open
 	- move into elevator and occupy space in front floor number buttons
-	- wait for input as to floor number 
-	- press corresponding floor button 
-	- wait for elevator to arrive at designated floor 
+	- wait for input as to floor number
+	- press corresponding floor button
+	- wait for elevator to arrive at designated floor
 	- exit elevator and await next command input
 
 -Otherwise elevator doors are closed
-	-move to vertical direction buttons next to doors 
+	-move to vertical direction buttons next to doors
 	-await input as to the vertical direction that will be travelled
-	-press corresponding button 
+	-press corresponding button
 	-wait for elevator to arrive and doors to open
 	- move into elevator and occupy space in front floor number buttons
-	- wait for input as to floor number 
-	- press corresponding floor button 
-	- wait for elevator to arrive at designated floor 
+	- wait for input as to floor number
+	- press corresponding floor button
+	- wait for elevator to arrive at designated floor
 	- exit elevator and await next command input
 
 
-Writing a short 
+Writing a short message
 
 -Pick up pen and paper
 
 -place paper on solid and stable surface
 
 -If message input already exists
-	-begin copying message input onto paper 
+	-begin copying message input onto paper
 	-proof read message for legibility
 		-if message illegible, dipose of properly and restart
-		-otherwise, find adhesive tape and pin message to fridge 
+		-otherwise, find adhesive tape and pin message to fridge
 
--Otherwise, wait to recieve message input 
-	-carefully copy message onto paper 
-	-ask source of input to proof read message 
+-Otherwise, wait to recieve message input
+	-carefully copy message onto paper
+	-ask source of input to proof read message
 	-if necessary dispose of message and start over
 	-otherwise, find adhesive tape and pin message to fridge
 
 
-	
