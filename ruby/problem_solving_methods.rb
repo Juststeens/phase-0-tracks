@@ -44,7 +44,6 @@ fib(6)
 5. take the greater value of the most recent pair and repeat steps 3 and 4 with the number to the right.
 8. repeat steps 1-5 until no more swaps need to be made
 
-require 'pry'
 list = [56, 31, 12, 5, 62, 2]
 
 def bubble_sort(list)
