@@ -1,0 +1,22 @@
+1.
+  Class:A class is a framework for object creation
+
+  State: information that is persistant when called multiple times
+
+  Behavior: code that manipulates information or processes such as methods
+
+  Instance Variable: a name beginning with @,can be called throughout whatever class it is defined
+
+  Instance Mehtod: methods that are called on instances of an initialized class
+
+2. Properties of an object an attribute can only exist with the class it is called.
+
+3.
+
+4.the initialize method runs during every instance it can hold arguements and instance variables.
+
+5. A module is a container for methods that can be inherited by classes
+
+6. a module can be a group of methods or classes, a module can have instance or module methods.
+
+
