@@ -16,12 +16,13 @@ require 'pry'
 
 class Hangman
   def initialize(word)
-    @word = word
+
+    @word = word.downcase
     @letters = word.chars.to_a
-    @alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K",
-    "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     @lives = word.length
     @guess
+    @guessed = []
+    @underscores = []
   end
 
   def begin
@@ -30,32 +31,67 @@ class Hangman
 
   def game_board
     #output underscores in place of each character of any word.
-    underscores = []
     @word.length.times do |letter|
-      underscores << '_ '
+      @underscores << '_ '
     end
-    puts "#{underscores.join} this word is #{@word.length} characters long"
+    puts "#{@underscores.join} this word is #{@word.length} characters long"
   end
 
   def guess(answer)
-    answer = gets.chomp.upcase.strip
-    @alphabet.delete_if {|letter| letter == answer}
-    @word.each do |letter|
-      if answer == letter
-
-
+    until @underscores.join == @word or @lives == 0
+      puts "What is your guess?"
+      answer = gets.chomp.to_s.downcase
+      if answer.length != 1
+        puts "Guess must be a single-character!"
+      end
+      if @guessed.include? answer
+        puts "Letter #{answer} was guessed already!"
+      else
+        @guessed << answer
+      end
+      found = false
+      @word.split('').each_with_index do |letter, position|
+        if answer == letter
+          @underscores[position] = answer
+          found = true
+          puts "Congratulations, you win" if @underscores.join == @word
+        end
+      end
+      @lives -= 1 if !found
+      puts "you have #{@lives} lives"
+      puts @underscores.join
+      puts "How did you not get #{@word}? Sorry, you lose." if @lives == 0
     end
   end
 
+#   def win
+#     @underscores == @word
+#     puts "Congratulations! you've won"
+#   end
+
+#   def lose
+#     @lives == 0
+#     puts "How did you not get #{@word}?"
+#   end
 end
+
+answer = nil
+
 
 puts "what's the secret word?"
 word = gets.chomp
 hangman = Hangman.new(word)
-
-puts "what's your guess"
-answer = gets.chomp
+puts
+puts
+puts
+puts
+puts
+puts
+puts
+puts
+hangman.begin
+hangman.game_board
 hangman.guess(answer)
 
-hangman.game_board
+
 
