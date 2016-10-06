@@ -12,6 +12,26 @@ function Longest_word(word_1, word_2, word_3){
     }
   }
   console.log(longest);
-}
+};
 
 var Words = new Longest_word('Hippo', 'Giraffe', 'Elephant');
+
+
+function getrandominteger(min, max){
+  return Math.random() * (max - min) + min;
+}
+
+
+alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+
+integer = getrandominteger(1, 10)
+
+function Array_builder(integer){
+  var arr = [];
+  var letters = alphabet;
+  for (var i = 0; i < integer; i++){
+    arr.push(letters[i])
+    console.log(arr)
+  }
+}
+console.log(Array_builder(integer));
