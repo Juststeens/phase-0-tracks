@@ -1,0 +1,71 @@
+sqlite> SELECT * FROM entree
+   ...> ;
+1|Spaghetti|false|2|1
+2|Hachis Parmentier|false|1|2
+3|Cheese Souffle|true|2|2
+
+
+sqlite> SELECT * FROM entree
+   ...> ;
+1|Spaghetti|false|2|1
+2|Hachis Parmentier|false|1|2
+3|Cheese Souffle|true|2|2
+sqlite> UPDATE entree
+   ...> SET name = "Steak"
+   ...> WHERE name = "Spaghetti";
+sqlite> SELECT * FROM entree
+   ...> ;
+1|Steak|false|2|1
+2|Hachis Parmentier|false|1|2
+3|Cheese Souffle|true|2|2
+
+
+sqlite> CREATE VIEW vw_combined AS
+   ...> SELECT * FROM entree
+   ...> UNION ALL
+   ...> SELECT * FROM dessert
+   ...> ;
+sqlite> SELECT * FROM vw_combined;
+1|Spaghetti|false|2|1
+2|Hachis Parmentier|false|1|2
+3|Cheese Souffle|true|2|2
+1|Apple Pie|true|3|2
+2|Smoothie Pops|false|2|1
+3|Peach Cobbler|false|1|1
+
+sqlite> SELECT name FROM vw_combined;
+Steak
+Hachis Parmentier
+Cheese Souffle
+Apple Pie
+Smoothie Pops
+Peach Cobbler
+
+sqlite> DELETE FROM entree
+   ...> WHERE skill_needed = true;
+Error: no such column: true
+sqlite> DELETE FROM entree
+   ...> WHERE skill_needed = 'true';
+sqlite> SELECT * FROM entree
+   ...> ;
+1|Steak|false|2|1
+2|Hachis Parmentier|false|1|2
+
+
+Joins
+
+SELECT * FROM vw_combined, health WHERE vw_combined.healthy = health.id;
+1|Steak|false|2|1|1|Healthy
+2|Hachis Parmentier|false|1|2|2|Unhealthy
+3|Cheese Souffle|true|2|2|2|Unhealthy
+1|Apple Pie|true|3|2|2|Unhealthy
+2|Smoothie Pops|false|2|1|1|Healthy
+3|Peach Cobbler|false|1|1|1|Healthy
+
+SELECT *
+   ...> FROM entree a,
+   ...> dessert b
+   ...> WHERE a.id = b.id;
+1|Steak|false|2|1|1|Apple Pie|true|3|2
+2|Hachis Parmentier|false|1|2|2|Smoothie Pops|false|2|1
+3|Cheese Souffle|true|2|2|3|Peach Cobbler|false|1|1
