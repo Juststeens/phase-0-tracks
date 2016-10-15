@@ -1,0 +1,19 @@
+Fruits vs vegetables
+Apple
+Broccoli
+Tomato
+Orange
+Celery
+Banana
+Coliflower
+Mango
+Cabbage
+Corn
+Brussels sprouts
+Grapes
+Lettuce
+Cherry
+Clementine
+Strawberry
+
+Foreign key fruit or vegetable?
